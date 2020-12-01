@@ -29,8 +29,9 @@ if(isset($_GET['page'])){
             break;
         case 'connect':
             $controller = new ConnectController();
+             $controller->verify();
             $controller->display();
-            $controller->verify();
+           
             break;    
         default:  
             $controller = new AccueilController();

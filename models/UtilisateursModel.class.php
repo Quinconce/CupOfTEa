@@ -9,10 +9,10 @@ class UtilisateursModel extends ModelManager{
         $this->query($query,[$name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal]);
        
     }
-    public function getUser(){
-        $util="SELECT id_ut,`mdp_ut`,`mail_ut` FROM `Utilisateurs`";
+    public function getUser($email){
+        $util="SELECT id_ut,`mdp_ut`,`mail_ut` FROM `Utilisateurs` WHERE mail_ut = ?";
         
-        $test=$this-> queryOne($util);
+        $test=$this-> queryOne($util,[$email]);
         return $test;
     }
 }
