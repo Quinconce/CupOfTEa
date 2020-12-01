@@ -19,7 +19,7 @@ if(isset($_GET['page'])){
     //le redirige ver sla bonne page
     switch($_GET['page']){
         case 'thes':
-            $controller = new TheController();
+            $controller = new ThesController();
             $controller->display();
             break;
         case 'register':
@@ -27,6 +27,11 @@ if(isset($_GET['page'])){
             $controller->display();
             $controller->newUser();
             break;
+        case 'connect':
+            $controller = new ConnectController();
+            $controller->display();
+            $controller->verify();
+            break;    
         default:  
             $controller = new AccueilController();
             $controller->display();

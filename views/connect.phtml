@@ -1,0 +1,26 @@
+<?php if(!isset($_SESSION['user'])): ?>
+    <form method="POST">
+        <p>
+            <label for="mail">adresse mail</label>
+            <input type="text" id="mail" name="mail">
+        </p>
+        <p>
+            <label for="verifpassword">Mot de passe</label>
+            <input type="password" name="verifpassword">
+        </p>
+        <p>
+            
+            <input type="submit" id="submit" value="se connecter!">
+            
+        </p>
+       
+    </form>
+    <?php if(isset($error)) :?> <strong><?= $error ?></strong><?php endif; ?>
+    <?php else: ?>
+    
+    <a href>Se déconnecter</a>
+    <h1>ceci s'affiche</h1>
+    
+    
+    <?php endif; ?>
+    

@@ -2,13 +2,17 @@
 
 class UtilisateursModel extends ModelManager{
     
-     public function __construct( $name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal){
-         
-         
-     }
+     
     public function registerUser($name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal){
-        $query="INSERT INTO `Utilisateurs` ( `nom_ut`, `prenom_ut`, `mail_ut`, `adresse_ut`, `tel_ut`, `date_ut`, `mdp_ut`, `ville_ut`, `codeP_ut`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-       $user=$this-> queryOne($query,[$name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal]);
-       return $user;
+        $query="INSERT INTO `Utilisateurs` (id_ut, `nom_ut`, `prenom_ut`, `mail_ut`, `adresse_ut`, `tel_ut`, `date_ut`, `mdp_ut`, `ville_ut`, `codeP_ut`) VALUES ( NULL,?, ?, ?, ?, ?, ?, ?, ?, ?);";
+       
+        $this->query($query,[$name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal]);
+       
+    }
+    public function getUser(){
+        $util="SELECT id_ut,`mdp_ut`,`mail_ut` FROM `Utilisateurs`";
+        
+        $test=$this-> queryOne($util);
+        return $test;
     }
 }

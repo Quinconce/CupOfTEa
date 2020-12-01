@@ -12,19 +12,26 @@ abstract class ModelManager{
         $query = $this->bdd->prepare($query);
         $query ->execute($params);
         $result = $query->fetch();
+        var_dump($query->errorInfo());
         return $result;
         
         
     }
     
-     public function queryAll($query,array $params = []){
+    public function queryAll($query,array $params = []){
         //methode qui va chercher UNE donnée en BDD
         $query = $this->bdd->prepare($query);
         $query ->execute($params);
         $results = $query->fetchAll();
+        var_dump($query->errorInfo());
         return $results;
         
         
+    }
+    public function query($query,array $params = []){
+        $query = $this->bdd->prepare($query);
+        $query ->execute($params);
+        var_dump($query->errorInfo());
     }
 }
 

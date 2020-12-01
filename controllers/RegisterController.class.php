@@ -31,7 +31,7 @@ class RegisterController
         $password = password_hash($_POST['pass'],PASSWORD_DEFAULT);
        
         
-         $well= new UtilisateursModel($name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal);
+         $well= new UtilisateursModel();
         $well->registerUser($name,$firstName,$mail,$adress,$tel,$date,$password,$city,$postal);
         }
     }
