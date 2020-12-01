@@ -22,7 +22,11 @@ if(isset($_GET['page'])){
             $controller = new TheController();
             $controller->display();
             break;
-            
+        case 'register':
+            $controller = new RegisterController();
+            $controller->display();
+            $controller->newUser();
+            break;
         default:  
             $controller = new AccueilController();
             $controller->display();

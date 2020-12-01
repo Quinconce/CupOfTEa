@@ -36,17 +36,17 @@
 					<h3><?= $new['titre_the'] ?></h3>
 					<p><?= $new['desc_the'] ?></p>
 					<section class="price">
-						<p>À partir de <strong><?= $new['prix'] ?></strong></p>
+						<p>À partir de <strong><?= $new['prix'] ?>Pieces d'or</strong></p>
 					</section>
 					<a class="btn" href="#">Voir ce produit</a>
 				</article>
 				<article id="best">
 					<h2><span>Notre best-seller</span></h2>
-					<img src="img/product/product2.jpg" alt="Infustion Herboriste" />
-					<h3>Infusion Herboriste</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<img src="<?= $best['image_the'] ?>" alt="Infustion Herboriste" />
+					<h3><?= $best['titre_the'] ?></h3>
+					<p><?= $best['desc_the'] ?></p>
 					<section class="price">
-						<p>À partir de <strong>7,60€</strong></p>
+						<p>À partir de <strong><?= $best['prix'] ?>Kamas</strong></p>
 					</section>
 					<a class="btn" href="#">Voir ce produit</a>
 				</article>
@@ -62,3 +62,4 @@
 				</article>
 			</section>
 		</main>
+		<script type="text/javascript" src="public/js/slider.js"></script>

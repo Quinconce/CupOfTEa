@@ -9,6 +9,7 @@ class AccueilController
             $theModel = new ThesModel();
             $cdc=$theModel -> getCdc();
             $new=$theModel -> getNew();
+            $best=$theModel -> getBest();
             //aller chercher les catégories
             $categoriesModel= new CategoriesModel();
             $cat = $categoriesModel ->getAllCategories();
