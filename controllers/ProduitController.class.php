@@ -8,9 +8,10 @@ class ProduitController
         
             //instance de mes class model pour les appeller dans les "phtml"
            
-            $thesModel= new ThesModel();
+            $thesModels= new ThesModel();
             $id= $_GET['idThes'];
-            $thesModel= $thesModel ->  getOneThes($id);
+            $thesModel= $thesModels ->  getOneThes($id);
+            $thesPrice= $thesModels ->  getPrice($id);
             
             
             

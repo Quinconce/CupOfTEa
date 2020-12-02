@@ -6,5 +6,20 @@
             <p> <?=  $thesModel['desc_the']?></p>
             
             <img src="<?= $thesModel['image_the'] ?>" alt="">
+            <form>
+                <select id="price">
+            <option selected="true" disabled="disabled">--Please choose an option--</option>
+        <?php  foreach($thesPrice as $price): ?>
+            <option data-price="<?=  $price['prix']?>" value="<?=  $price['poid']?>"><?=  $price['poid']?></option>
+        <?php endforeach; ?>
+    
+           
+    
+            </select>
+            </form>
+             <p id="prix"></p>
+            <a  data-id="<?= $thesModel['id_the'] ?>" id="test"><button>Ajouter au panier</button></a>
             
     </article>
+    
+<script type="text/javascript" src="public/js/main.js"></script>

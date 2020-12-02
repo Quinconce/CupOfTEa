@@ -29,7 +29,7 @@ if(isset($_GET['page'])){
             break;
         case 'connect':
             $controller = new ConnectController();
-             $controller->verify();
+            $controller->verify();
             $controller->display();
            break;    
         case 'disconnect':
