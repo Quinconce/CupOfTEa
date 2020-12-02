@@ -22,7 +22,7 @@
 				<h2><span>Choisissez votre thé</span></h2>
 				
 				<?php foreach($cat as $cate): ?>
-				<a href="#">
+				<a href="index.php?page=categories&id=<?= $cate['id_cat'] ?>">
 					<img src="<?= $cate['image_cat'] ?>"alt="Tasse de thé noir" />
 					<h3><?= $cate['nom_cat'] ?></h3>
 				</a>

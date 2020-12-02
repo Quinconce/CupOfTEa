@@ -31,16 +31,23 @@ if(isset($_GET['page'])){
             $controller = new ConnectController();
              $controller->verify();
             $controller->display();
-           
-            break;    
+           break;    
         case 'disconnect':
             $controller = new DisconnectController();
             $controller->disconnect();    
+            break;
+        case 'produit':
+            $controller = new ProduitController();
+            $controller->display();    
             break;
         case 'accueil':
             $controller = new AccueilController();
             $controller->display();    
             break;
+        case 'categories':
+            $controller = new CategoriesController();
+            $controller->display();
+            break;    
         default:  
             $controller = new AccueilController();
             $controller->display();

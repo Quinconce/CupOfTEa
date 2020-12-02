@@ -1,0 +1,7 @@
+<?php  foreach($thesCat as $thes): ?>
+    <article>
+            <a href="index.php?page=produit&idThes=<?= $thes['id_the'] ?>"><h1><?= $thes['titre_the'] ?> </h1></a>
+            <p> <?= substr( $thes['desc_the'] , 0, 100) ?>)...</p>
+            <img src="<?= $thes['image_the'] ?>" alt="">
+    </article>
+<?php endforeach; ?>

@@ -3,7 +3,9 @@
 class ThesModel extends ModelManager{
     
     public function getOneThes($id){
-        $req = "SELECT nom_the FROM thes WHERE id_the = ?";
+        $req = "SELECT `ref_the`,`titre_the`,`sousTitre_the`,`image_the`,`desc_the`,`publish`,`id_the`
+                FROM Thes
+                WHERE id_the = 1 AND publish=1";
         $tea = $this -> queryOne($req,[$id]);
         return $tea;
     }
