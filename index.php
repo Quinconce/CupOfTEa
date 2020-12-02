@@ -33,6 +33,14 @@ if(isset($_GET['page'])){
             $controller->display();
            
             break;    
+        case 'disconnect':
+            $controller = new DisconnectController();
+            $controller->disconnect();    
+            break;
+        case 'accueil':
+            $controller = new AccueilController();
+            $controller->display();    
+            break;
         default:  
             $controller = new AccueilController();
             $controller->display();

@@ -7,13 +7,19 @@ class ConnectController
     {
         
             //instance de mes class model pour les appeller dans les "phtml"
-            
-            
+           
+            $utilisateurModel= new UtilisateursModel();
+            $users= $utilisateurModel -> getUser();
             
             
             
             $template ='connect.phtml';
             require 'views/layout.phtml';
+            
+            
+            
+            
+            
     }    
     public function verify(){
         

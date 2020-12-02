@@ -16,10 +16,9 @@
        
     </form>
     <?php if(isset($error)) :?> <strong><?= $error ?></strong><?php endif; ?>
-    <?php else: ?>
+    <?php else: header('location:index.php?page=accueil') ;?>
     
-    <a href>Se déconnecter</a>
-    <h1>ceci s'affiche</h1>
+    
     
     
     <?php endif; ?>
