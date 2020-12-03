@@ -30,36 +30,36 @@
 			
 			</section>
 			<section id="tea">
-				<article id="new">
-					<h2><span>Notre nouveauté</span></h2>
-					<img src="<?= $new['image_the'] ?>" alt="Thé du Hammam" />
-					<h3><?= $new['titre_the'] ?></h3>
-					<p><?= $new['desc_the'] ?></p>
-					<section class="price">
-						<p>À partir de <strong><?= $new['prix'] ?>Pieces d'or</strong></p>
-					</section>
-					<a class="btn" href="#">Voir ce produit</a>
-				</article>
-				<article id="best">
-					<h2><span>Notre best-seller</span></h2>
-					<img src="<?= $best['image_the'] ?>" alt="Infustion Herboriste" />
-					<h3><?= $best['titre_the'] ?></h3>
-					<p><?= $best['desc_the'] ?></p>
-					<section class="price">
-						<p>À partir de <strong><?= $best['prix'] ?>Kamas</strong></p>
-					</section>
-					<a class="btn" href="#">Voir ce produit</a>
-				</article>
-				<article id="crush">
-					<h2><span>Notre coup de coeur</span></h2>
-					<img src="<?= $cdc['image_the'] ?>" alt="Blue of London" />
-					<h3><?= $cdc['titre_the'] ?></h3>
-					<p><?= $cdc['desc_the'] ?>.</p>
-					<section class="price">
-						<p>À partir de <strong><?= $cdc['prix'] ?>€</strong></p>
-					</section>
-					<a class="btn" href="product.html">Voir ce produit</a>
-				</article>
-			</section>
+                <article id="new">
+                    <h2><span>Notre nouveauté</span></h2>
+                    <img src="<?= $new['image_the'] ?>" alt="Thé du Hammam" />
+                    <h3><?= $new['titre_the'] ?></h3>
+                    <p><?= $new['desc_the'] ?></p>
+                    <section class="price">
+                        <p>À partir de <strong><?= $new['prix'] ?>€</strong></p>
+                    </section>
+                    <a class="btn" href="index.php?page=produit&idThes=<?= $new['new'] ?>">Voir ce produit</a>
+                </article>
+                <article id="best">
+                    <h2><span>Notre best-seller</span></h2>
+                    <img src="<?= $best['image_the'] ?>" alt="Infustion Herboriste" />
+                    <h3><?= $best['titre_the'] ?></h3>
+                    <p><?= $best['desc_the'] ?></p>
+                    <section class="price">
+                        <p>À partir de <strong><?= $best['prix'] ?>€</strong></p>
+                    </section>
+                    <a class="btn" href="index.php?page=produit&idThes=<?= $best['id_the'] ?>">Voir ce produit</a>
+                </article>
+                <article id="crush">
+                    <h2><span>Notre coup de coeur</span></h2>
+                    <img src="<?= $cdc['image_the'] ?>" alt="Blue of London" />
+                    <h3><?= $cdc['titre_the'] ?></h3>
+                    <p><?= $cdc['desc_the'] ?>.</p>
+                    <section class="price">
+                        <p>À partir de <strong><?= $cdc['prix'] ?>€</strong></p>
+                    </section>
+                    <a class="btn" href="index.php?page=produit&idThes=<?= $cdc['id_the'] ?>">Voir ce produit</a>
+                </article>
+            </section>
 		</main>
 		<script type="text/javascript" src="public/js/slider.js"></script>

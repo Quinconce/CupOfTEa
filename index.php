@@ -31,6 +31,11 @@ if(isset($_GET['page'])){
             $controller = new ConnectController();
             $controller->verify();
             $controller->display();
+           break;
+        case 'panier':
+            $controller = new PanierController();
+            $controller->verify();
+            $controller->display();
            break;    
         case 'disconnect':
             $controller = new DisconnectController();
