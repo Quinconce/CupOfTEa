@@ -1,3 +1,11 @@
+let produit = [];
+
+document.addEventListener('DOMContentLoaded', function() {
+   restore()
+   displayBdd()
+
+})
+
 function restore() {
     //recupere le storage,si c'est pas null, parse pour passer de json a tableau 
 
@@ -6,28 +14,42 @@ function restore() {
     if (recupTab !== null) {
 
 
-        panier = JSON.parse(recupTab);
+        produit = JSON.parse(recupTab);
 
 
         // const reducer = (accumulator, currentValue) => accumulator + currentValue;
         // console.log((recupTab.prix).reduce(reducer));
 
         let tot = 0
-        for (let i = 0; i < panier.length; i++) {
+        for (let i = 0; i < produit.length; i++) {
 
-            tot += parseFloat(panier[i].prix)
+            tot += parseFloat(produit[i].prix)
 
         }
 
         console.log(tot)
         document.querySelector('#valeurPanier').innerHTML = tot.toFixed(2) + "€"; //pourquoi?
     }
+}    
     
- 
-       for (let i = 0; i < panier.length; i++){
-
-            $.post('controllers/PanierController.class.php',{idtry:panier.id},displayall)
-
-        }
-         
+    function displayBdd(){
+    
+    //faire une requete asynchrone de type POST
+    console.log(produit)
+    //récupérer tout ce qu'il y a dans mon formulaire
+    
+    //créer un objet Request
+    let req = new Request('../../models/ThesModel.class.php',{
+        body:produit
+    })
+    
+    fetch(req)
+        .then(response => response.json())
+        .then(jeu=>{
+            document.getElementById('result').innerHTML=`<strong>${jeu['image_the']}</strong>`;
+        })
+        .catch(err => console.log(err));
 }
+ 
+       
+         
