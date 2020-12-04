@@ -49,4 +49,16 @@ class PanierController
             }
         }
     }
+    public function getInfo(){
+        
+         $id = produit.article;
+        $poid =produit.poids;
+        $prix= produit.prix;
+        
+        $content = trim(file_get_contents("php://input"));
+
+        $data = json_decode($content);
+        
+        echo json_encode($data);
+    }
 }    

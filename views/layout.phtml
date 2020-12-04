@@ -27,6 +27,11 @@
 		<!--HEADER-->
 		<header>
 			<img class="ribbon" src="public/img/ribbon.svg" alt="élu meilleur thé en 2016" />
+			<?php if (!isset($_COOKIE["username"])): ?>
+			<div class="cookie">
+				<a href="CookieModel.class.php">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, eligendi, pariatur, reiciendis, qui necessitatibus nesciunt tempora laboriosam voluptatofficia doloribus asperiores similique ratione earum mollitia error vel deserunt officiis delectus iusto illo molestiae iste ut a. Vel, fugiat inventore assumenda.</a><button id="oui">Oui</button><button id="non">Non</button>
+				</div>
+			<?php endif; ?>
 			<section id="topbar">Livraison offerte à partir de 65€ d'achat !</section>
 			<div class="container">
 				<section id="logo">

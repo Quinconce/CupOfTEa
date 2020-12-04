@@ -1,6 +1,7 @@
 let select;
 let price;
 let id;
+let size;
 let panier = [];
 document.addEventListener('DOMContentLoaded', function() {
     let addPanier = document.getElementById('test');
@@ -27,7 +28,7 @@ function sauvegard() {
 
 
     id = this.dataset.id
-    let size = document.querySelector("#poid").value;
+    size = document.querySelector("#price").value;
     let data = { prix: price, poids: size, article: id };
     console.log(data)
 
@@ -68,11 +69,6 @@ function restore() {
     }
     
  
-        for (let i = 0; i < panier.length; i++) {
-
-            $.post('controllers/PanierController.class.php',{idtry:panier.id},displayall)
-
-        }
         
 }
 

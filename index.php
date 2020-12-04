@@ -36,7 +36,10 @@ if(isset($_GET['page'])){
             $controller = new PanierController();
             $controller->verify();
             $controller->display();
-           break;    
+           break;
+        case 'tester':
+            $controller = new PanierController();
+            $controller->getInfo();
         case 'disconnect':
             $controller = new DisconnectController();
             $controller->disconnect();    
